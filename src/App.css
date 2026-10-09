@@ -1,0 +1,451 @@
+:root {
+  --farmacia-green: #1d9a64;
+  --farmacia-green-dark: #103b2f;
+  --farmacia-green-soft: #eafaf1;
+  --farmacia-blue: #d9f0ff;
+  --farmacia-gold: #f7c96b;
+  --farmacia-text: #18392d;
+  --farmacia-muted: #587166;
+  --farmacia-white: #ffffff;
+  --farmacia-border: rgba(16, 59, 47, 0.08);
+  --shadow-soft: 0 20px 50px rgba(16, 59, 47, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #f7fffb 0%, #eef7ff 100%);
+  color: var(--farmacia-text);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.farmacia-app {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 255, 251, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--farmacia-border);
+}
+
+.topo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  background: linear-gradient(135deg, #1d9a64 0%, #3cc989 100%);
+  box-shadow: 0 12px 20px rgba(29, 154, 100, 0.25);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.brand-text span {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--farmacia-green-dark);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu a {
+  color: var(--farmacia-text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: var(--farmacia-green);
+}
+
+.botao-primary,
+.botao-secundario {
+  border: none;
+  border-radius: 14px;
+  padding: 0.9rem 1.35rem;
+  font-weight: 800;
+  transition: all 0.2s ease;
+}
+
+.botao-primary {
+  background: linear-gradient(135deg, var(--farmacia-green) 0%, #35bf80 100%);
+  color: var(--farmacia-white);
+  box-shadow: 0 12px 25px rgba(29, 154, 100, 0.25);
+}
+
+.botao-primary:hover {
+  transform: translateY(-1px);
+}
+
+.botao-secundario {
+  background: #fff;
+  color: var(--farmacia-green-dark);
+  border: 1px solid var(--farmacia-border);
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: center;
+  padding: 72px 0 52px;
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--farmacia-green-soft);
+  color: #0f766e;
+  border: 1px solid rgba(29, 154, 100, 0.15);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  margin: 18px 0 18px;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.06em;
+  color: var(--farmacia-green-dark);
+}
+
+.hero-copy h1 span {
+  color: var(--farmacia-green);
+}
+
+.hero-copy p {
+  margin: 0;
+  max-width: 560px;
+  color: var(--farmacia-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats strong {
+  font-size: 1.55rem;
+  color: var(--farmacia-green-dark);
+}
+
+.stats span {
+  color: var(--farmacia-muted);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: linear-gradient(160deg, #103b2f 0%, #1d9a64 100%);
+  border-radius: 28px;
+  padding: 28px 24px;
+  color: var(--farmacia-white);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: "✚";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 3rem;
+  opacity: 0.2;
+}
+
+.card-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: #e5fff5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-box {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+}
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 1.7rem;
+}
+
+.card-label {
+  margin: 0;
+  color: #dffdf1;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card-box h3 {
+  margin: 6px 0 0;
+  font-size: 1.5rem;
+}
+
+.hero-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.hero-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #eafaf1;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green { background: #acf7cd; }
+.dot.blue { background: #bfe7ff; }
+.dot.gold { background: #ffd985; }
+
+.price-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-box small {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d7f7ea;
+}
+
+.price-box strong {
+  font-size: 1.4rem;
+}
+
+.servicos-section {
+  padding: 30px 0 64px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading span {
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--farmacia-green-dark);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.servico-card {
+  background: var(--farmacia-white);
+  border: 1px solid var(--farmacia-border);
+  border-radius: 24px;
+  padding: 26px 22px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.04);
+}
+
+.servico-card.destaque {
+  background: linear-gradient(160deg, #f0fff6 0%, #eaf4ff 100%);
+  border-color: rgba(29, 154, 100, 0.12);
+}
+
+.servico-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #dffbf0 0%, #edf7ff 100%);
+  color: var(--farmacia-green-dark);
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.servico-card h3 {
+  margin: 0 0 10px;
+  color: var(--farmacia-green-dark);
+  font-size: 1.35rem;
+}
+
+.servico-card p {
+  margin: 0;
+  color: var(--farmacia-muted);
+  line-height: 1.7;
+}
+
+.card-link {
+  display: inline-flex;
+  margin-top: 18px;
+  background: #fff;
+  color: var(--farmacia-green-dark);
+  border: 1px solid rgba(16, 59, 47, 0.08);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .topo-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding-top: 52px;
+  }
+
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .botao-primary,
+  .botao-secundario {
+    width: 100%;
+  }
+
+  .stats {
+    gap: 18px;
+  }
+}

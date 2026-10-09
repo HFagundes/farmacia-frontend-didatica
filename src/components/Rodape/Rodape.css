@@ -1,0 +1,131 @@
+:root {
+  --rodape-bg: #0f2b22;
+  --rodape-bg-strong: #122f27;
+  --rodape-accent: #3ec98d;
+  --rodape-accent-soft: #dffbf0;
+  --rodape-gold: #ffc857;
+  --rodape-text: #edf7f2;
+  --rodape-muted: #cfe8db;
+  --rodape-border: rgba(255, 255, 255, 0.12);
+}
+
+.rodape-container {
+  background: linear-gradient(135deg, var(--rodape-bg) 0%, var(--rodape-bg-strong) 100%);
+  color: var(--rodape-text);
+  border-top: 1px solid var(--rodape-border);
+  box-shadow: 0 -12px 30px rgba(9, 36, 29, 0.18);
+}
+
+.rodape-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 20px 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.rodape-info,
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rodape-info h3,
+.rodape-links h4 {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.rodape-info h3 {
+  color: var(--rodape-text);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.rodape-info p,
+.rodape-links p,
+.rodape-equipe {
+  margin: 0;
+  color: var(--rodape-muted);
+  line-height: 1.6;
+}
+
+.rodape-links h4 {
+  color: var(--rodape-accent-soft);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.equipe-lista {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--rodape-muted);
+  font-weight: 600;
+}
+
+.equipe-lista span {
+  color: var(--rodape-text);
+  font-weight: 700;
+}
+
+.rodape-equipe {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.social-icons i {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--rodape-border);
+  color: var(--rodape-accent-soft);
+  font-size: 1rem;
+}
+
+.rodape-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px 24px;
+  border-top: 1px solid var(--rodape-border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--rodape-muted);
+  font-size: 0.92rem;
+}
+
+.rodape-bottom p {
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .rodape-content {
+    grid-template-columns: 1fr;
+    padding-top: 28px;
+  }
+
+  .rodape-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
