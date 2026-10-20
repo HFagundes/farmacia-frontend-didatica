@@ -5,7 +5,7 @@ class ClienteRequests {
     private endpoint: string;
 
     constructor() {
-        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/api/clientes";
+        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/listar/clientes";
     }
 
     private normalizarCliente(cliente: any): ClienteDTO {
