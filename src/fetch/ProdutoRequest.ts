@@ -5,7 +5,7 @@ class ProdutoRequests {
     private endpoint: string;
 
     constructor() {
-        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/api/produtos";
+        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/produtos";
     }
 
     private normalizarProduto(produto: any): ProdutoDTO {
