@@ -12,7 +12,7 @@ class AuthRequests {
      */
     constructor() {
         // endereço do servidor
-        this.serverUrl = 'https://farmacia-backend-didatica-434y.onrender.com/';
+        this.serverUrl = 'https://farmacia-backend-didatica-434y.onrender.com';
         // rota do servidor
         this.endpointLogin = '/api/login';
         this.loginEndpoints = [

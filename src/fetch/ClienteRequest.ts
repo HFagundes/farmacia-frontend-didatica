@@ -5,7 +5,7 @@ class ClienteRequests {
     private endpoint: string;
 
     constructor() {
-        this.endpoint = "http://localhost:3333/api/clientes";
+        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/api/clientes";
     }
 
     private normalizarCliente(cliente: any): ClienteDTO {
@@ -13,7 +13,6 @@ class ClienteRequests {
             idCliente: cliente.idCliente || cliente.id_cliente,
             nome: cliente.nome,
             cpf: cliente.cpf
-            
     
         };
     }
