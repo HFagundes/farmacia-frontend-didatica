@@ -5,7 +5,7 @@ class ItemPedidoRequests {
     private endpoint: string;
 
     constructor() {
-        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/item-pedido";
+        this.endpoint = "https://farmacia-backend-didatica-434y.onrender.com/itens";
     }
 
     private normalizarItemPedido(itemPedido: any): ItemPedidoDTO {
